@@ -51,3 +51,5 @@ The project/solution builds successfully.
 There are no build errors that would prevent the application from compiling.
 The correct .NET SDK is available for the project.
 The code pushed to GitHub passes the configured CI build process.
+
+<img width="1332" height="610" alt="image" src="https://github.com/user-attachments/assets/7642c285-a098-449a-846e-994434c642d4" />

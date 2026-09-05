@@ -115,3 +115,14 @@ CREATE TABLE Results
         REFERENCES Category(CategoryID)
 );
 
+INSERT INTO Organisers (Name, Surname, Email, PhoneNumber)
+VALUES
+('Thabo', 'Mokoena', 'thabo.mokoena@raceday.co.za', '0825551001'),
+('Lerato', 'Dlamini', 'lerato.dlamini@raceday.co.za', '0835551002');
+
+
+INSERT INTO Participants (Name, Surname, Age, Email, PhoneNumber)
+VALUES
+('Sipho', 'Nkosi', 24, 'sipho.nkosi@email.com', '0845552001'),
+('Anele', 'Mthembu', 29, 'anele.mthembu@email.com', '0855552002');
+

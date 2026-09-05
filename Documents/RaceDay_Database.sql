@@ -209,3 +209,22 @@ VALUES
 (2, 2),
 (1, 3),
 (2, 3);
+
+INSERT INTO Results
+    (FinishTime, FinishPosition, ParticipantID, EventID, CategoryID)
+VALUES
+('00:52:34', 1, 1, 1, 1),
+('00:57:48', 2, 2, 1, 1),
+('01:58:21', 1, 1, 2, 3),
+('02:05:42', 2, 2, 2, 3),
+('00:26:15', 1, 1, 3, 5),
+('00:29:37', 2, 2, 3, 5);
+
+
+SELECT * FROM Organisers;
+SELECT * FROM Participants;
+SELECT * FROM [USER];
+SELECT * FROM Events;
+SELECT * FROM Category;
+SELECT * FROM Enrollment;
+SELECT * FROM Results;

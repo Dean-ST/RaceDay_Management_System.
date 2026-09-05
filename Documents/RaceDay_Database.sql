@@ -190,3 +190,22 @@ VALUES
     'Fun Run',
     1
 );
+
+INSERT INTO Category (Age, EventID)
+VALUES
+(18, 1),
+(30, 1),
+(18, 2),
+(30, 2),
+(18, 3),
+(30, 3);
+
+
+INSERT INTO Enrollment (ParticipantID, EventID)
+VALUES
+(1, 1),
+(2, 1),
+(1, 2),
+(2, 2),
+(1, 3),
+(2, 3);

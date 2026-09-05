@@ -64,3 +64,32 @@ CREATE TABLE Events
         REFERENCES Organisers(OrganiserID)
 );
 
+CREATE TABLE Category
+(
+    CategoryID INT IDENTITY(1,1) PRIMARY KEY,
+    Age INT NOT NULL CHECK (Age > 0 AND Age < 120),
+    EventID INT NOT NULL,
+
+    CONSTRAINT FK_Category_Event
+        FOREIGN KEY (EventID)
+        REFERENCES Events(EventID)
+);
+
+CREATE TABLE Enrollment
+(
+    EnrollmentID INT IDENTITY(1,1) PRIMARY KEY,
+    ParticipantID INT NOT NULL,
+    EventID INT NOT NULL,
+
+    CONSTRAINT FK_Enrollment_Participant
+        FOREIGN KEY (ParticipantID)
+        REFERENCES Participants(ParticipantID),
+
+    CONSTRAINT FK_Enrollment_Event
+        FOREIGN KEY (EventID)
+        REFERENCES Events(EventID),
+
+    CONSTRAINT UQ_Enrollment_Participant_Event
+        UNIQUE (ParticipantID, EventID)
+);
+

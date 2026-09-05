@@ -93,3 +93,25 @@ CREATE TABLE Enrollment
         UNIQUE (ParticipantID, EventID)
 );
 
+CREATE TABLE Results
+(
+    ResultID INT IDENTITY(1,1) PRIMARY KEY,
+    FinishTime TIME NOT NULL,
+    FinishPosition INT NOT NULL CHECK (FinishPosition > 0),
+    ParticipantID INT NOT NULL,
+    EventID INT NOT NULL,
+    CategoryID INT NOT NULL,
+
+    CONSTRAINT FK_Results_Participant
+        FOREIGN KEY (ParticipantID)
+        REFERENCES Participants(ParticipantID),
+
+    CONSTRAINT FK_Results_Event
+        FOREIGN KEY (EventID)
+        REFERENCES Events(EventID),
+
+    CONSTRAINT FK_Results_Category
+        FOREIGN KEY (CategoryID)
+        REFERENCES Category(CategoryID)
+);
+
